@@ -4,7 +4,7 @@ import FactorialComponent from '../components/FactorialComponent';
 export default function Home() {
   const [number, setNumber] = useState(0);
 
-  const handleNumber = (e) => {
+  const handleNumberChange = (e) => {
     setNumber(parseInt(e.target.value, 10));
   }
 
@@ -16,7 +16,7 @@ export default function Home() {
         <input
           type="number"
           value={number}
-          onChange={handleNumber}
+          onChange={handleNumberChange}
         />
         <FactorialComponent number={number} />
       </section>
